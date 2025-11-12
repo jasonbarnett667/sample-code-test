@@ -155,10 +155,10 @@ class TestComplexScenarios:
         cart.apply_discount("TECH15", discount_type="percentage", value=15)
 
         # Subtotal: 999.99 + 59.98 + 79.99 = 1139.96
-        # After 15% discount: 1139.96 * 0.85 = 969.466
-        # After 8.5% tax: 969.466 * 1.085 = 1051.87
+        # After 15% discount: 1139.96 * 0.85 = 968.966
+        # After 8.5% tax: 968.966 * 1.085 = 1051.33
         assert round(cart.get_subtotal(), 2) == 1139.96
-        assert round(cart.get_total(), 2) == 1051.87
+        assert round(cart.get_total(), 2) == 1051.33
 
     def test_remove_item_and_recalculate(self):
         cart = ShoppingCart()
