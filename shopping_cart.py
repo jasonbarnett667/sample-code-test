@@ -13,8 +13,10 @@ class ShoppingCart:
 
     def __init__(self):
         """Initialize an empty shopping cart."""
-        # TODO: Initialize data structures to store cart items and discount info
-        pass
+        # Use a dictionary to store items: {name: {'price': float, 'quantity': float}}
+        self.items = {}
+        # Store discount information
+        self.discount = None
 
     def add_item(self, name: str, price: float, quantity: float) -> None:
         """
